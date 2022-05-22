@@ -4,10 +4,11 @@ import { useAuthState, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import Loading from '../../Shared/Loading/Loading'
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase/firebase.init';
+import './SocialLogin.css';
 
 const SocialLogin = () => {
     //````````---Social Login---````````
-    const [signInWithGoogle, userG, loadingG, errorG] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, userGoogle, loading, error] = useSignInWithGoogle(auth);
 
     //``````````````` get user and send to current page ``````````````````
     const [user] = useAuthState(auth);
@@ -17,7 +18,7 @@ const SocialLogin = () => {
     if (user) {
         navigate(from, { replace: true });
     }
-    if (loadingG) {
+    if (loading) {
         return <Loading></Loading>;
     }
     return (
@@ -29,6 +30,9 @@ const SocialLogin = () => {
                     <div className='secondDiv'></div>
                 </div>
             </div>
+            {
+                error && <p className='text-danger'> {error.message} </p>
+            }
             <div className='linkButton'>
                 <button onClick={() => signInWithGoogle()}> <img src={Google} alt="" /> Google</button>
             </div>

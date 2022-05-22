@@ -23,9 +23,9 @@ const NavigationBar = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto navBarLink">
                             <Nav.Link className='navLink' as={Link} to="/home"><span>Home</span></Nav.Link>
-                            <Nav.Link className='navLink' as={Link} to="/manageItems"><span>Manage Items</span></Nav.Link>
-                            <Nav.Link className='navLink' as={Link} to="/addItems"><span>Add Items</span></Nav.Link>
-                            <Nav.Link className='navLink' as={Link} to="/myItems"><span>My Items</span></Nav.Link>
+                                <Nav.Link className={user?'navLink':'d-none'} as={Link} to="/manageItems"><span>Manage Items</span></Nav.Link>
+                                <Nav.Link className={user?'navLink':'d-none'} as={Link} to="/addItems"><span>Add Items</span></Nav.Link>
+                                <Nav.Link className={user?'navLink':'d-none'} as={Link} to="/myItems"><span>My Items</span></Nav.Link>
                             <Nav.Link className='navLink' as={Link} to="/blogs"><span>Blogs</span></Nav.Link>
                             <Nav.Link className='navLink' as={Link} to="/about"><span>About</span></Nav.Link>
                             <Nav.Link className='navLink' as={Link} to="/contact"><span>Contact</span></Nav.Link>

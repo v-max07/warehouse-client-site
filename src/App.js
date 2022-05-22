@@ -5,6 +5,7 @@ import Blogs from './Pages/Blogs/Blogs';
 import Contact from './Pages/Contact/Contact';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/LoginPass/Login';
+import Register from './Pages/Login/Register/Register';
 import AddItems from './Pages/Shared/AfterLogin/AddItems/AddItems';
 import ManageItems from './Pages/Shared/AfterLogin/ManageItems/ManageItems';
 import MyItems from './Pages/Shared/AfterLogin/My Items/MyItems';
@@ -25,6 +26,7 @@ function App() {
         <Route path='/about' element={<About></About>} />
         <Route path='/contact' element={<Contact></Contact>} />
         <Route path='/login' element={<Login></Login>} />
+        <Route path='/register' element={<Register></Register>} />
       </Routes>
       <Footer></Footer>
     </div>

@@ -1,3 +1,6 @@
 .navLink>span{
     color:black;
 }
+.navLink:hover span{
+    color:rgb(242, 78, 33);
+}
