@@ -7,6 +7,25 @@ import './ManageItems.css';
 
 const ManageItems = () => {
     const [items, setItems] = LoadItems();
+
+    //for delete a single item
+    const handleItemDelete = id => {
+        const proceed = window.confirm("Are you sure you want to delete!")
+        if (proceed) {
+            const url = `http://localhost:5000/inventory/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        const remaining = items.filter(item => item._id !== id);
+                        setItems(remaining);
+                    }
+                })
+            
+        }
+    }
     return (
         <div>
             <div></div>
@@ -30,6 +49,7 @@ const ManageItems = () => {
                             items.map(item => <ManageItem
                                 key={item._id}
                                 item={item}
+                                handleItemDelete={handleItemDelete}
                             ></ManageItem>)
                         }
                     </tbody>
