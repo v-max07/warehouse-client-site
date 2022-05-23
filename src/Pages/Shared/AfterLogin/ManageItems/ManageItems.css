@@ -1,0 +1,16 @@
+.addItemBtn{
+    padding: 7px 14px 11px 14px;
+    background-color: rgba(16, 152, 16, 0.919);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    border: 0;
+    border-radius: 3px;
+}
+.addItemBtn>span{
+    font-size: 25px;
+}
+
+.addItemBtn:hover{
+    background-color: rgba(14, 115, 14, 0.837);
+}

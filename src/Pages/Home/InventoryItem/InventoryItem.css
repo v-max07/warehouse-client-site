@@ -10,3 +10,6 @@
     border-radius: 4px;
     color: #ffff;
 }
+.updateBtn:hover{
+    background-color: rgb(22, 109, 52);
+}
