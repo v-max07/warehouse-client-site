@@ -1,9 +1,12 @@
 import React from 'react';
+import Header from '../Header/Header';
+import Inventory from './Inventory/Inventory';
 
 const Home = () => {
     return (
         <div>
-            <h2>Home Page</h2>
+            <Header></Header>
+            <Inventory></Inventory>
         </div>
     );
 };

@@ -1,0 +1,13 @@
+.vitamealsDiv{
+    width: 75%;
+}
+
+.bannerBtn{
+    color: #FFFF;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(250, 117, 48);
+}
+.bannerBtn:hover{
+    background-color: rgb(221, 90, 24);
+}

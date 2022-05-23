@@ -1,0 +1,12 @@
+.itmeDiv{
+    border: 1px solid orange;
+    padding: 10px;
+    border-radius: 4px;
+}
+.updateBtn{
+    background-color: rgb(30, 162, 76);
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 4px;
+    color: #ffff;
+}
