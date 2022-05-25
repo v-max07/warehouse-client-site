@@ -15,7 +15,7 @@ const AddItems = () => {
 
         const newItem = { name, supplierName, image, price, description, category };
 
-        fetch('http://localhost:5000/inventory', {
+        fetch('https://quiet-headland-11687.herokuapp.com/inventory', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ const AddItems = () => {
     }
     return (
         <Container>
-            <h2 style={{ color:'rgb(250, 117, 48)'}} className='text-center mt-3 text-decoration-underline'>Add a new Item</h2>
+            <h2 style={{ color: 'rgb(250, 117, 48)' }} className='text-center mt-3 text-decoration-underline'>Add a new Item</h2>
             <div className='addItemContainer'>
                 <Form onSubmit={handleAddNewItem}>
                     <Row>

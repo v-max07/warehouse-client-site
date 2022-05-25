@@ -7,10 +7,10 @@ const UpdateInventory = () => {
     const [item, setItems] = useState();
     const { item_id } = useParams();
     useEffect(() => {
-        fetch(`http://localhost:5000/inventory/${item_id}`)
+        fetch(`https://quiet-headland-11687.herokuapp.com/inventory/${item_id}`)
             .then(res => res.json())
             .then(data => setItems(data))
-    
+
     }, [item_id]);
     if (item) {
         console.log(item.name)
@@ -25,7 +25,7 @@ const UpdateInventory = () => {
                         </div>
                         <div className='infoDivUpdate'>
                             <div>
-                                <h2 style={{ color: '#1EA24C'}}>{item.name} </h2>
+                                <h2 style={{ color: '#1EA24C' }}>{item.name} </h2>
                                 <p className='fw-normal'>{item.description} </p>
                                 <p className='fw-bold'> Quantity: {item.quantity} </p>
                                 <p className='fw-bold'> Supplier Name: {item.supplierName} </p>

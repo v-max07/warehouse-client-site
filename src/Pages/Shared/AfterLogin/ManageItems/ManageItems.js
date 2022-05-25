@@ -12,7 +12,7 @@ const ManageItems = () => {
     const handleItemDelete = id => {
         const proceed = window.confirm("Are you sure you want to delete!")
         if (proceed) {
-            const url = `http://localhost:5000/inventory/${id}`;
+            const url = `https://quiet-headland-11687.herokuapp.com/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -23,7 +23,7 @@ const ManageItems = () => {
                         setItems(remaining);
                     }
                 })
-            
+
         }
     }
     return (
