@@ -1,0 +1,31 @@
+.addItemContainer{
+    width: 75%;
+    margin: 30px auto;
+    border: 1px solid orange;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: antiquewhite;
+}
+
+.addItemContainer input{
+    margin: 10px 0;
+    padding: 9px;
+}
+.addItemButton{
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 0px;
+    background-color: rgb(30, 162, 76);
+    color: #ffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+.addItemButton:hover{
+    background-color: rgb(19, 115, 53);
+}
+.inputTextArea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+}

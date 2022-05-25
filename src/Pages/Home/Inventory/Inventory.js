@@ -14,7 +14,7 @@ const Inventory = () => {
             <Container>
                 <div className='itemsContainer'>
                     {
-                        items.map(item => <InventoryItem
+                        items.slice(0, 6).map(item => <InventoryItem
                             key={item._id} item={item}
                         ></InventoryItem>)
                     }
